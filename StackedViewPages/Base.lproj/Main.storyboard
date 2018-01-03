@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6m-lQ-94T">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>TimesNewRomanPSMT</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="f01-Cw-JBf">
+            <objects>
+                <viewController id="C6m-lQ-94T" customClass="ViewController" customModule="StackViewMenuAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uBJ-Pd-BID">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImg" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-bU-BSo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="533.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92860243060000003" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3bS-bU-BSo" firstAttribute="width" secondItem="uBJ-Pd-BID" secondAttribute="width" id="8iz-8v-wM4"/>
+                            <constraint firstItem="3bS-bU-BSo" firstAttribute="centerX" secondItem="MdE-8D-ZI9" secondAttribute="centerX" id="HW1-Ij-fy1"/>
+                            <constraint firstItem="3bS-bU-BSo" firstAttribute="top" secondItem="MdE-8D-ZI9" secondAttribute="top" id="PIU-qH-n91"/>
+                            <constraint firstItem="3bS-bU-BSo" firstAttribute="height" secondItem="uBJ-Pd-BID" secondAttribute="height" multiplier="0.8" id="VfV-SN-x9t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MdE-8D-ZI9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJa-Ms-lQA" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Stacked Element View Controller-->
+        <scene sceneID="1hB-MG-UQt">
+            <objects>
+                <viewController storyboardIdentifier="stackElementVC" id="Me7-K5-weY" customClass="StackedElementViewController" customModule="StackViewMenuAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fpd-lE-fAf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Controller Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHx-WF-7KI">
+                                <rect key="frame" x="30" y="30" width="197" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IjO-pr-9CP">
+                                <rect key="frame" x="30" y="75.5" width="315" height="491.5"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8163665926" green="0.42945686620000001" blue="0.36864647389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DHx-WF-7KI" firstAttribute="leading" secondItem="CWh-3A-f9y" secondAttribute="leading" constant="30" id="0eR-3d-iyk"/>
+                            <constraint firstItem="CWh-3A-f9y" firstAttribute="trailing" secondItem="IjO-pr-9CP" secondAttribute="trailing" constant="30" id="5te-rc-z0E"/>
+                            <constraint firstItem="DHx-WF-7KI" firstAttribute="top" secondItem="CWh-3A-f9y" secondAttribute="top" constant="10" id="IWB-AS-kmM"/>
+                            <constraint firstItem="IjO-pr-9CP" firstAttribute="leading" secondItem="CWh-3A-f9y" secondAttribute="leading" constant="30" id="U7U-WU-qbe"/>
+                            <constraint firstItem="CWh-3A-f9y" firstAttribute="bottom" secondItem="IjO-pr-9CP" secondAttribute="bottom" constant="100" id="WWT-cn-TVS"/>
+                            <constraint firstItem="IjO-pr-9CP" firstAttribute="top" secondItem="DHx-WF-7KI" secondAttribute="bottom" constant="20" id="vcC-Gs-N9A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CWh-3A-f9y"/>
+                    </view>
+                    <connections>
+                        <outlet property="controllerDetail" destination="IjO-pr-9CP" id="EPm-cQ-ItC"/>
+                        <outlet property="controllerName" destination="DHx-WF-7KI" id="X8X-YW-HFY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBZ-dc-D6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bgImg" width="82" height="153"/>
+    </resources>
+</document>
